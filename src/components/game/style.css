@@ -1,0 +1,15 @@
+
+img{
+    width: 50px;
+    height: auto;
+}
+
+.container-game{
+    margin-top: 25%;
+}
+
+.container-balls{
+    display: flex;
+    position: relative;
+    z-index: 9999;
+}

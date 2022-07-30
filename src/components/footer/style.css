@@ -1,0 +1,13 @@
+
+.footer{
+    position: relative;
+    z-index: 9999;
+}
+
+
+
+@media (max-width: 768px) { 
+    .obs{
+        width: 50%;
+    }
+ }

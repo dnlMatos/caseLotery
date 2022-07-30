@@ -1,0 +1,11 @@
+.concurso {
+  color: white;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 576px) {
+  .concurso {
+    flex-direction: row!important;
+    justify-content: center;
+  }
+}

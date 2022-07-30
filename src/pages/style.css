@@ -1,0 +1,58 @@
+* {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+.row {
+  height: 33.33vh;
+  position: relative;
+  z-index: 9999;
+}
+
+.container-fluid {
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  background: pink;
+  overflow: hidden;
+  position: relative;
+}
+
+.color1 {
+  background: #6befa3;
+  width: 100%;
+}
+
+.color2 {
+  background: #efefef;
+  position: absolute;
+  border-radius: 50%;
+  top: -75%;
+  right: -60%;
+  width: 120%;
+  height: 250%;
+}
+
+@media (max-width: 576px) {
+  .row {
+    height: 20vh;
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  .model {
+    justify-content: center;
+  }
+
+  .concurso {
+    justify-content: center;
+  }
+
+  .color2 {
+    transform: rotate(90deg);
+    top: -15%;
+    right: -10%;
+  }
+}

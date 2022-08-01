@@ -11,15 +11,40 @@
 
 .container-fluid {
   width: 100vw;
-  /* height: 100vh; */
+  height: 100vh;
   display: flex;
   background: pink;
   overflow: hidden;
   position: relative;
 }
 
-.color1 {
+.colorMega {
   background: #6befa3;
+  width: 100%;
+}
+
+.colorQuina{
+  background: #8666ef;
+  width: 100%;
+}
+
+.colorLotoFacil {
+  background: #dd7ac6;
+  width: 100%;
+}
+
+.colorLotoMania {
+  background: #ffab64;
+  width: 100%;
+}
+
+.colorTimeMania {
+  background: #5aad7d;
+  width: 100%;
+}
+
+.colorSorte {
+  background: #bfaf83;
   width: 100%;
 }
 
@@ -33,7 +58,19 @@
   height: 250%;
 }
 
+.group{
+  display: flex;
+}
+
 @media (max-width: 576px) {
+  .mobile{
+    display: block!important;
+  }
+
+  .none{
+    display: none;
+  }
+
   .row {
     height: 20vh;
   }
@@ -50,9 +87,14 @@
     justify-content: center;
   }
 
+  .balls{
+    flex-wrap: wrap;
+
+  }
+
   .color2 {
     transform: rotate(90deg);
-    top: -15%;
+    top: -35%;
     right: -10%;
   }
 }

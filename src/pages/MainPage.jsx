@@ -9,36 +9,38 @@ import "./style.css";
 export default function MainPage() {
   return (
     <div class="container-fluid p-0">
-      <div class="color1">
-        <div className="container col-6">
-          <div className="row">
-            <div className="header col-sm-6 col-12 d-flex align-items-center">
-              <Header />
+      <div class="colorMega">
+        <div className="container d-flex mobile">
+          <div className="container col-md-4 col-12">
+            <div className="row">
+              <div className="header m-0 d-flex align-items-center">
+                <Header />
+              </div>
+            </div>
+            <div className="row">
+              <div className="model d-flex align-items-center">
+                <Model />
+              </div>
+            </div>
+            <div className="row">
+              <div className="concurso d-flex">
+                <Concurso />
+              </div>
             </div>
           </div>
-          <div className="row">
-            <div className="model col-sm-6 col-12 d-flex align-items-center">
-              <Model />
+          <div className="container">
+            <div className="row none">
+              <div className="d-flex align-items-center"></div>
             </div>
-          </div>
-          <div className="row">
-            <div className="concurso col-sm-6 col-12 d-flex align-items-center">
-              <Concurso />
+            <div className="row">
+              <div className="d-flex align-items-center justify-content-end balls">
+                <Game />
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="container col-6">
-          <div className="row">
-            <div className="col-sm-6 col-12 d-flex align-items-center"></div>
-          </div>
-          <div className="row">
-            <div className="col-sm-6 col-12 d-flex align-items-center">
-              <Game />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-sm-6 col-12 d-flex align-items-center">
-              <Footer />
+            <div className="row">
+              <div className="d-flex align-items-center justify-content-end">
+                <Footer />
+              </div>
             </div>
           </div>
         </div>

@@ -4,10 +4,8 @@
     z-index: 9999;
 }
 
-
-
 @media (max-width: 768px) { 
-    .obs{
-        width: 50%;
+    .footer{
+        text-align: center;
     }
  }

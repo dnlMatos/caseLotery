@@ -4,3 +4,12 @@
     position: relative;
     z-index: 9999;
 }
+
+@media (max-width: 576px) {
+    .container-balls{
+        margin: 0!important;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+  }

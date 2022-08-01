@@ -4,7 +4,7 @@ import "./style.css";
 
 export default function Game() {
   return (
-    <div className="container-balls">
+    <div className="container-balls gap-3">
       <Ball />
       <Ball />
       <Ball />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Concurso from "../components/concurso/Concurso";
 import Footer from "../components/footer/Footer";
 import Game from "../components/game/Game";
@@ -7,6 +7,7 @@ import Model from "../components/model/Model";
 import "./style.css";
 
 export default function MainPage() {
+ 
   return (
     <div class="container-fluid p-0">
       <div class="colorMega">

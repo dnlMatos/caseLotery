@@ -18,3 +18,12 @@ export const getLoteriasConcursos = async () => {
     throw new Error(error);
   }
 };
+
+export const getConcursosById = async (id) => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/concursos/${id}`)
+    return data
+  } catch (error) {
+    throw new Error(error);
+  }
+}

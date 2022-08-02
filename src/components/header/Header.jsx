@@ -1,17 +1,46 @@
-import React from 'react'
-import './style.css'
-
+import React, { useContext, useEffect, useState } from "react";
+import { Context } from "../../context/context";
+import "./style.css";
 
 export default function Header() {
-    return (
-        <select className="form-select">
-            <option selected>Selecione o jogo</option>
-            <option value="1">MEGA-SENA</option>
-            <option value="2">QUINA</option>
-            <option value="3">LOTOFÁCIL</option>
-            <option value="4">LOTOMANIA</option>
-            <option value="5">TIMEMANIA</option>
-            <option value="6">DIA DE SORTE</option>
-        </select>
-    )
+  const { loterias, setId, loteriasConcurso, id } = useContext(Context);
+  const [filterId, setFilterId] = useState([])
+  const idString = Number(id);
+
+  useEffect(() => {
+    filterById();
+  }, [idString]);
+
+  const getSelect = (e) => {
+    setId(e.target.value);
+  };
+
+  const filterById = () => {
+    const resul = loteriasConcurso
+      .filter((loteria) => {
+        return loteria.loteriaId == id;
+      })
+      .map((loteria) => {
+        return loteria;
+      });
+      setFilterId(resul)
+  };
+
+  console.log(filterId);
+  console.log(idString);
+
+  return (
+    <select className="form-select" onChange={getSelect}>
+      <option selected value={""}>
+        Selecione o jogo
+      </option>
+      {loterias.map((loteria) => {
+        return (
+          <option key={loteria.id} value={loteria.id}>
+            {loteria.nome}
+          </option>
+        );
+      })}
+    </select>
+  );
 }

@@ -12,7 +12,7 @@ export default function MainPage() {
     <div class="container-fluid p-0">
       <div class="colorMega">
         <div className="container d-flex mobile">
-          <div className="container col-md-4 col-12">
+          <div className="container m-0 col-md-4 col-12">
             <div className="row">
               <div className="header m-0 d-flex align-items-center">
                 <Header />
@@ -29,7 +29,7 @@ export default function MainPage() {
               </div>
             </div>
           </div>
-          <div className="container">
+          <div className="container m-0 col-md-8">
             <div className="row none">
               <div className="d-flex align-items-center"></div>
             </div>

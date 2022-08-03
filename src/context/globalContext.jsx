@@ -5,6 +5,7 @@ import { Context } from "./context";
 export default function GlobalContext(props) {
   const [loterias, setLoterias] = useState([]);
   const [loteriasConcurso, setLoteriasConcursos] = useState([]);
+  const [concursosId, setConcursosId] = useState([])
   const [filterConcurso, setFilterConcurso] = useState([])
   const [id, setId] = useState("");
 
@@ -23,9 +24,8 @@ export default function GlobalContext(props) {
     setLoteriasConcursos(resp);
   };
 
-
   return (
-    <Context.Provider value={{ filterConcurso, setFilterConcurso, loterias, setLoterias, loteriasConcurso, setLoteriasConcursos, id, setId }}>
+    <Context.Provider value={{ filterConcurso, setFilterConcurso, concursosId, setConcursosId, loterias, setLoterias, loteriasConcurso, setLoteriasConcursos, id, setId }}>
       {props.children}
     </Context.Provider>
   );

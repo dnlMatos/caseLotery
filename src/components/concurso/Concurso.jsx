@@ -4,29 +4,32 @@ import moment from "moment";
 import "./style.css";
 
 export default function Concurso() {
-  const { loteriasConcurso, filterConcurso, id } = useContext(Context);
-  const [filter, setFilter] = useState([])
-
-  console.log(id);
-  console.log(loteriasConcurso);
-  console.log(filterConcurso);
+  const { loteriasConcurso, concursosId, id } = useContext(Context);
+  const [filter, setFilter] = useState([]);
 
   useEffect(() => {
-    filterById()
-  }, [id])
+    filterById();
+  }, [id]);
 
   const filterById = () => {
-    const resul = loteriasConcurso
-      .filter((loteria) => {
-        return loteria.loteriaId == id;
-      })
-    setFilter(resul)
+    const resul = loteriasConcurso.filter((loteria) => {
+      return loteria.loteriaId == id;
+    });
+    console.log(resul);
+    setFilter(resul);
   };
 
   return (
     <div className="concurso gap-3">
       <p className="m-0">CONCURSO</p>
-      <p className="m-0 fw-bold">{filter[0]?.concursoId} - {moment(filterConcurso.data).format("DD/MM/YYYY")}</p>
+      {id == "" ? (
+        <p>SELECIONE UM JOGO</p>
+      ) : (
+        <p className="m-0 fw-bold">
+          {filter[0]?.concursoId} - {" "}
+          {moment(concursosId.data).format("DD/MM/YYYY")}
+        </p>
+      )}
     </div>
   );
 }

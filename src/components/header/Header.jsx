@@ -4,14 +4,12 @@ import { getConcursosById } from "../../requests/Request";
 import "./style.css";
 
 export default function Header() {
-  const { loterias, setId, loteriasConcurso, id, setFilterConcurso } = useContext(Context);
-  const [filterId, setFilterId] = useState([])
-  const idString = Number(id);
+  const { filterConcurso, setFilterConcurso, loterias, setId, loteriasConcurso, id, setConcursosId } = useContext(Context);
 
   useEffect(() => {
     filterById();
-    getConcursoById(filterId)
-  }, [idString]);
+    getConcursoById(filterConcurso)
+  }, [id]);
 
   const getSelect = (e) => {
     setId(e.target.value);
@@ -22,12 +20,12 @@ export default function Header() {
       .filter((loteria) => {
         return loteria.loteriaId == id;
       })
-    setFilterId(resul[0]?.concursoId)
+      setFilterConcurso(resul[0]?.concursoId)
   };
 
   const getConcursoById = async (id) => {
     const result = await getConcursosById(id)
-    setFilterConcurso(result)
+    setConcursosId(result)
   }
 
   return (

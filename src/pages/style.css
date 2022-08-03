@@ -9,6 +9,10 @@
   z-index: 9999;
 }
 
+.autoHeight{
+  height: auto!important;
+}
+
 .container-fluid {
   width: 100vw;
   height: 100vh;
@@ -41,6 +45,10 @@
 .colorTimeMania {
   background: #5aad7d;
   width: 100%;
+}
+
+.balls{
+  flex-wrap: wrap;
 }
 
 .colorSorte {
@@ -85,11 +93,6 @@
 
   .concurso {
     justify-content: center;
-  }
-
-  .balls{
-    flex-wrap: wrap;
-
   }
 
   .color2 {

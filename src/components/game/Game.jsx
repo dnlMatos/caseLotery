@@ -7,8 +7,6 @@ export default function Game() {
 
   useEffect(() => {}, [id]);
 
-  console.log(concursosId);
-  console.log(id);
   return (
     <div className="container-balls gap-3">
       {id == "" ? (

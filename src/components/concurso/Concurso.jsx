@@ -2,21 +2,34 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../../context/context";
 import moment from "moment";
 import "./style.css";
+import { getConcursosById } from "../../requests/Request";
 
 export default function Concurso() {
-  const { loteriasConcurso, concursosId, id } = useContext(Context);
+  const { loteriasConcurso, concursosId, id, setConcursosId } =
+    useContext(Context);
   const [filter, setFilter] = useState([]);
 
   useEffect(() => {
     filterById();
   }, [id]);
 
+  useEffect(() => {
+    getConcursoById(filter);
+  }, [filter]);
+
   const filterById = () => {
-    const resul = loteriasConcurso.filter((loteria) => {
-      return loteria.loteriaId == id;
-    });
-    console.log(resul);
-    setFilter(resul);
+    loteriasConcurso
+      .filter((loteria) => {
+        return loteria.loteriaId == id;
+      })
+      .map((resp) => {
+        setFilter(resp.concursoId);
+      });
+  };
+
+  const getConcursoById = async (id) => {
+    const result = await getConcursosById(id);
+    setConcursosId(result);
   };
 
   return (
@@ -26,8 +39,7 @@ export default function Concurso() {
         <p>SELECIONE UM JOGO</p>
       ) : (
         <p className="m-0 fw-bold">
-          {filter[0]?.concursoId} - {" "}
-          {moment(concursosId.data).format("DD/MM/YYYY")}
+          {concursosId.id} - {moment(concursosId.data).format("DD/MM/YYYY")}
         </p>
       )}
     </div>

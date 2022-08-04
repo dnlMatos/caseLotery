@@ -39,7 +39,7 @@ export default function Concurso() {
         <p>SELECIONE UM JOGO</p>
       ) : (
         <p className="m-0 fw-bold">
-          {concursosId.id} - {moment(concursosId.data).format("DD/MM/YYYY")}
+          {concursosId?.id} - {moment(concursosId?.data).format("DD/MM/YYYY")}
         </p>
       )}
     </div>

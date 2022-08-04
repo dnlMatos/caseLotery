@@ -6,7 +6,7 @@ export default function Router() {
   return (
     <BrowserRouter>
         <Switch>
-            <Route exact path={'/loterias'}>
+            <Route exact path={'/'}>
                 <MainPage/>
             </Route>
         </Switch>

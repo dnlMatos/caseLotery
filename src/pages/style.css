@@ -23,37 +23,43 @@
 }
 
 .colorMega {
-  background: #6befa3;
+  background: #6befa3!important;
   width: 100%;
 }
 
 .colorQuina{
-  background: #8666ef;
+  background: #8666ef!important;
   width: 100%;
 }
 
 .colorLotoFacil {
-  background: #dd7ac6;
+  background: #dd7ac6!important;
   width: 100%;
 }
 
 .colorLotoMania {
-  background: #ffab64;
+  background: #ffab64!important;
   width: 100%;
 }
 
 .colorTimeMania {
-  background: #5aad7d;
+  background: #5aad7d!important;
+  width: 100%;
+}
+
+.colorSorte {
+  background: #bfaf83!important;
+  width: 100%;
+}
+
+.colorDefault {
+  background: #0d99ff;
   width: 100%;
 }
 
 .balls{
   flex-wrap: wrap;
-}
-
-.colorSorte {
-  background: #bfaf83;
-  width: 100%;
+  justify-content: end;
 }
 
 .color2 {
@@ -73,6 +79,10 @@
 @media (max-width: 576px) {
   .mobile{
     display: block!important;
+  }
+
+  .balls{
+    justify-content: center;
   }
 
   .none{
@@ -97,7 +107,7 @@
 
   .color2 {
     transform: rotate(90deg);
-    top: -35%;
+    top: -15%;
     right: -10%;
   }
 }

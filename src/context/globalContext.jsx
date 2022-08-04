@@ -11,6 +11,9 @@ export default function GlobalContext(props) {
 
   useEffect(() => {
     getLoteria();
+  }, []);
+
+  useEffect(() => {
     getLoteriaConcurso();
   }, []);
 

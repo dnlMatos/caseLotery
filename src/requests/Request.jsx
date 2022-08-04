@@ -24,6 +24,6 @@ export const getConcursosById = async (id) => {
     const { data } = await axios.get(`${BASE_URL}/concursos/${id}`)
     return data
   } catch (error) {
-    throw new Error(error);
+    console.log(error);
   }
 }
